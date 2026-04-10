@@ -351,10 +351,113 @@ while i<len(list):
     elif list[i]>second_largest and list[i]!=largest:
         second_largest=list[i]
     i=i+1
-print(f'Second largest from the collection is:{second_largest}')          # Second largest from the collection is:4      
+print(f'Second largest from the collection is:{second_largest}')          # Second largest from the collection is:4    
 
+# WAP toncheck the given number is prime number or not
+num=7                   
+i=1
+count=0
+while i<=num:
+    if num%i==0:
+        count=count+1
+    i=i+1
+if count==2:
+    print(f'{num} is a prime number')     # 7 is a prime number
+else:
+    print(f'{num} is not a prime number')   
 
+# OR
+num=4
+i=2    
+count=0
+while i < num:
+    if num % i==0:
+        count=count+1
+    i=i+1
+if count==0 and num>1:
+    print(f'{num} is a prime number')       # 5 is a prime number
+else:
+    print(f'{num} is not a prime number')       # 4 is not a prime number
 
+# WAP to print prime numbers from 1 to 30
+num=1
+while num<=30:
+    i=1
+    count=0
+    while i<=num:
+        if num%i==0:
+            count=count+1
+        i=i+1
+    if count==2:
+        print(num ,end=' ') 
+    num=num+1                   # 2 3 5 7 11 13 17 19 23 29
+
+# WAP to check the given number is armstrong number or not 
+num=153
+temp=num
+sum_cubes=0
+length=len(str(num))
+while num > 0:
+    digit = num % 10
+    sum_cubes=sum_cubes+digit**length
+    num=num//10
+if temp == sum_cubes:
+        print(f'{temp} is armstrong number')        # 153 is armstrong number
+else:
+        print(f'{temp} is not armstrong number')
+
+# WAP to print armstrong number from 1 to 1000
+num=1
+while num<=10000:
+    temp=num
+    sum_cubes=0
+    length=len(str(num))
+    while temp > 0:
+        digit = temp % 10
+        sum_cubes=sum_cubes+digit**length
+        temp=temp//10
+    if num == sum_cubes:
+        print(num, end=' ')        # 1 2 3 4 5 6 7 8 9 153 370 371 407 1634 8208 9474 
+    num=num+1                   
+
+# WAP to print fibonacci series up to n terms
+n=5
+a,b=0,1
+count=0
+while count<n:
+    print(a, end=' ')
+    temp=a+b
+    a=b
+    b=temp
+    count=count+1  # 0 1 1 2 3
+
+# WAP to check the given number is Neon number or not
+num=9
+square=num**2
+sum_digits=0
+temp=square
+while temp>0:
+    digit=temp%10
+    sum_digits=sum_digits+digit
+    temp=temp//10
+if sum_digits==num:
+    print(f'{num} is a neon number')     # 9 is a neon number   
+else:    
+    print(f'{num} is not a neon number')    
+
+# WAP to print neon number from 1 to 1000
+num=1
+while num<=1000:
+    square=num**2
+    sum_digits=0
+    temp=square
+    while temp>0:
+        digit=temp%10
+        sum_digits=sum_digits+digit
+        temp=temp//10
+    if sum_digits==num:
+        print(num, end=' ')     # 1 9 
+    num=num+1    
 
 
 
