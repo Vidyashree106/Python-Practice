@@ -236,6 +236,7 @@ print(isinstance(b,str))            # true
 
 b='smith'
 print(isinstance(b,int))            # False
+
 #--------------------------------------------------------------------------------------------------------------------------------------#
 
 # WAP to calculate uppercase and lowercase letters from given string
