@@ -707,21 +707,55 @@ Three categories of variables in object-oriented programming:
 
 ## 📊 Repository Structure
 
-```
-Python A118/
-├── Day1-40 Python files              # Daily learning files
-├── Control statements/                # if, elif, else, nested if
-├── Operators/                        # Arithmetic, relational, logical operators
-├── Looping statements/               # while, for loops
-├── Jumping statements/               # break, continue, pass
-├── Functions/                        # Built-in methods, user-defined functions
-├── Main/                            # Main program files
-├── *.csv files                      # Employee data (CSV format)
-├── *.txt files                      # Text file examples
-├── functions programming.ipynb      # Jupyter notebook
-├── data.bin                         # Binary file example
-└── README.md                        # This file
-```
+**Days 1-9 Files (Fundamentals)**
+- Day1(print,keyword).py - Print function and Python keywords
+- Day2(creating-identifiers,variables,string formatting,commentline).py - Variables, identifiers, string formatting
+- Day3(datatypes).py - Data types overview
+- Day4(String datatype -indexing,slicing).py - String indexing and slicing
+- Day5(List -indexing,slicing).py - List operations
+- Day6(tuple-indexing,slicing).py - Tuple operations
+- Day7(Set datatype,Dictionary datatype,Range).py - Sets, dictionaries, range
+- Day8(Typecasting-implicit,explicit,datatypes).py - Type casting and conversions
+- Day9(Input , eval Statements).py - Input and eval functions
+
+**Days 31-40 Files (Advanced - Scoping, File Handling, OOP)**
+- Day31(Scope_of_variables).py - Global, local, and nested variable scopes
+- Day32(File handling).py - Text file operations
+- Day33(CSV file handling).py - CSV file reading and writing
+- Day34(Binary filehandling).py - Binary files and pickle module
+- Day35(Exception handling).py - Try, except, else, finally blocks
+- Day36(Custom exception handling).py - Creating custom exceptions
+- Day37(Creating class and object).py - Classes and objects
+- Day38(Constructor).py - Constructor methods
+- Day39(Types of constuctor).py - Different constructor patterns
+- Day40(types of oops variable).py - Instance, static, and local variables in OOP
+
+**Folders**
+- Operators/ - Day 10-12: Arithmetic, relational, and logical operators
+- Control statements/ - Day 13-16: if, elif, else, and nested if statements
+- Looping statements/ - Day 17-22: while and for loops
+- Jumping statements/ - Day 23: break, continue, and pass statements
+- Functions/ - Day 24-30: Built-in and user-defined functions
+- Main/ - Main program files
+
+**Data Files**
+- emp1.csv - Employee data in CSV format
+- emp2.csv - Employee data in CSV format
+- main.csv - Main dataset in CSV format
+- python.csv - Python course data in CSV format
+- Students_data.csv - Student records in CSV format
+
+**Text Files**
+- python118.txt - Python course notes
+- Pythonbatch.txt - Batch processing examples
+- java.txt - Java reference
+- students.txt - Student list
+
+**Other Files**
+- functions programming.ipynb - Jupyter notebook with interactive function examples
+- data.bin - Binary file with pickled Python objects
+- main.py - Main execution file
+- README.md - This comprehensive guide
 
 ---
 
