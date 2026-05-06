@@ -1,6 +1,15 @@
-# Python A118 - Daily Python Learning Journey 📚
+# Python A118 - Complete Python Fundamentals Course 🐍
 
-An ongoing Python fundamentals learning repository where I practice and master Python concepts day by day. This course follows a structured progression from basic printing and keywords to advanced operators and control flow statements.
+A comprehensive, day-by-day Python learning journey covering fundamental concepts through object-oriented programming. This structured curriculum progresses from basic printing and keywords to advanced OOP concepts, file handling, and exception handling.
+
+## 📋 Course Overview
+
+This repository contains complete course materials for the Python A118 program, with 40+ days of structured learning:
+- **Fundamentals**: Print statements, variables, data types, operators
+- **Control Flow**: Conditional statements, loops, jumping statements  
+- **Functions**: Built-in methods, user-defined functions
+- **Advanced Concepts**: File handling, CSV/Binary files, exception handling
+- **OOP**: Classes, objects, constructors, OOPS variables
 
 ---
 
@@ -389,6 +398,389 @@ Assign values, combine conditions, test membership, and check object identity:
 - **Identity Operators** (referenced but shown in conditional statements):
   - **is**: Checks if two variables refer to same object
   - **is not**: Checks if variables don't refer to same object
+
+---
+
+## 🔀 Control Flow & Functions
+
+### **Day 12: Relational Operators** (Operators folder)
+Compare values and make decisions based on comparisons (detailed in Day 10).
+
+### **Day 13-16: Conditional Statements - if, elif, else** (Control statements folder)
+Make decisions in code based on conditions:
+
+**Topics Covered:**
+- **if statement**: Execute code if condition is true
+- **elif statement**: Multiple conditions check (else if)
+- **else statement**: Execute if no previous condition is true
+- **Nested if**: if statements inside if statements
+- **Truth values**: 0 is False, any non-zero is True
+
+### **Day 17-22: Looping Statements** (Looping statements folder)
+Execute code repeatedly with while and for loops:
+
+**Topics Covered:**
+- **While Loop**: Repeat while condition is true
+- **For Loop**: Iterate over sequences
+- **Range Function**: Generate sequences for iteration
+- **Loop Control**: Break, continue, pass statements
+
+### **Day 23: Jumping Statements - break, continue, pass** (Jumping statements folder)
+Control loop execution flow:
+
+**Topics Covered:**
+- **break**: Exit the loop immediately
+- **continue**: Skip to next iteration
+- **pass**: Placeholder, does nothing
+
+### **Day 24-30: Functions** (Functions folder)
+Create reusable code blocks:
+
+**Topics Covered:**
+- **Built-in String Methods**: upper(), lower(), strip(), split(), replace(), find(), startswith(), endswith(), format()
+- **Built-in List Methods**: append(), extend(), insert(), remove(), pop(), clear(), index(), count(), sort(), reverse()
+- **Built-in Tuple Methods**: count(), index()
+- **Built-in Dictionary Methods**: keys(), values(), items(), get(), update(), pop(), clear()
+- **Built-in Set Methods**: add(), remove(), discard(), union(), intersection(), difference()
+- **Match-Case Statement**: Python 3.10+ pattern matching
+- **User-Defined Functions**: Create custom functions with parameters and return values
+
+---
+
+## 📁 File Handling & Data Processing
+
+### **Day 31: Variable Scope - Global, Local, Nested**
+Understand variable accessibility in different scopes:
+
+**Topics Covered:**
+- **Global Variables**: Accessible throughout the entire program
+  - Declared outside functions
+  - Modified using `global` keyword inside functions
+  - Accessed directly inside and outside functions
+  
+- **Local Variables**: Accessible only within the function
+  - Declared inside functions
+  - Cannot be accessed outside the function
+  - Function parameters are local to that function
+  
+- **Nested Functions**: Functions defined inside other functions
+  - Inner function can access outer function's variables
+  - Using `nonlocal` keyword to modify outer function variables
+  
+- **Scope Resolution Order** (LEGB):
+  - Local → Enclosing → Global → Built-in
+
+---
+
+### **Day 32: Text File Handling**
+Read, write, and manipulate text files:
+
+**Topics Covered:**
+- **File Modes**:
+  - `'w'` - Write: Create/overwrite file
+  - `'r'` - Read: Open existing file for reading
+  - `'a'` - Append: Add content to end of file
+  - `'w+'` - Write and Read: Create file and read back
+  - `'r+'` - Read and Write: Open file for both operations
+  - `'a+'` - Append and Read: Add content and read
+  - `'x'` - Create: Create new file only (error if exists)
+  
+- **File Operations**:
+  - `file.read()` - Read entire file content
+  - `file.write()` - Write content to file
+  - `file.close()` - Close file (important for cleanup)
+  - `file.seek()` - Move file pointer to position
+  - Using `with` statement for automatic file closing
+  
+- **Best Practice**: Using `with` statement prevents file handle leaks
+
+---
+
+### **Day 33: CSV File Handling**
+Work with Comma-Separated Values data files:
+
+**Topics Covered:**
+- **CSV Module**: Import `csv` module for CSV operations
+- **csv.reader()**: Read CSV files row by row
+- **csv.writer()**: Write data to CSV files
+- **DictReader**: Read CSV as dictionaries with column names as keys
+- **DictWriter**: Write dictionaries to CSV
+- **Parsing CSV Data**: Convert rows to meaningful data structures
+- **Employee Data Management**: Store and retrieve employee records
+
+---
+
+### **Day 34: Binary File Handling**
+Work with binary data files using pickle module:
+
+**Topics Covered:**
+- **Binary Files**: Non-text data storage (images, compiled code, serialized objects)
+- **Pickle Module**: Serialize and deserialize Python objects
+  - `pickle.dump()` - Write Python object to binary file
+  - `pickle.load()` - Read Python object from binary file
+  
+- **File Modes for Binary**:
+  - `'wb'` - Write binary
+  - `'rb'` - Read binary
+  
+- **Use Cases**: Store complex data structures (lists, dictionaries, objects) in files
+- **Security Note**: Only unpickle data from trusted sources
+
+---
+
+## 🛡️ Error Handling & OOP
+
+### **Day 35: Exception Handling - try, except, else, finally**
+Handle errors gracefully and prevent program crashes:
+
+**Topics Covered:**
+- **Try-Except Block**: Basic exception handling
+  - `try:` - Code that may raise exception
+  - `except:` - Handle specific exceptions
+  
+- **Common Exceptions**:
+  - `ZeroDivisionError` - Division by zero: `98/0`
+  - `ValueError` - Invalid value: `int('abc')`
+  - `TypeError` - Wrong type: `'string' + 5`
+  - `IndexError` - Out of range: `list[999]`
+  - `KeyError` - Missing dictionary key
+  - `FileNotFoundError` - File doesn't exist
+  
+- **Multiple Except Blocks**: Handle different exceptions separately
+  ```python
+  try:
+      num = int(input('Enter number:'))
+  except ValueError:
+      print('Invalid number')
+  except TypeError:
+      print('Wrong type')
+  ```
+  
+- **Else Block**: Executes if no exception occurs
+- **Finally Block**: Always executes (cleanup code)
+  ```python
+  try:
+      file = open('data.txt', 'r')
+  except FileNotFoundError:
+      print('File not found')
+  finally:
+      file.close()  # Always runs
+  ```
+
+---
+
+### **Day 36: Custom Exception Handling**
+Create and raise custom exceptions:
+
+**Topics Covered:**
+- **Custom Exceptions**: Define your own exception classes
+  - Inherit from `Exception` class
+  - Raise with `raise` keyword
+  - Useful for application-specific errors
+  
+- **User-Defined Exception Example**:
+  ```python
+  class InvalidAgeError(Exception):
+      pass
+  
+  age = int(input('Enter age:'))
+  if age < 0:
+      raise InvalidAgeError('Age cannot be negative')
+  ```
+
+---
+
+### **Day 37: Creating Classes and Objects**
+Start object-oriented programming:
+
+**Topics Covered:**
+- **Class Definition**: Blueprint for objects
+  ```python
+  class Employee:
+      company = 'Techcorp'  # Class variable
+      
+      def __init__(self, name, salary):
+          self.name = name      # Instance variable
+          self.salary = salary
+  ```
+  
+- **Object Creation**: Instantiate class
+  ```python
+  emp1 = Employee('Smith', 98000)
+  emp2 = Employee('John', 76000)
+  ```
+  
+- **Class Variables**: Shared by all instances
+  - Accessed via class name: `Employee.company`
+  - Same value across all objects
+  
+- **Instance Variables**: Individual per object
+  - Accessed via `self` keyword
+  - Each object has its own copy
+  - Different values per object
+  
+- **Accessing Variables**:
+  - Instance: `emp1.name`, `emp1.salary`
+  - Class: `Employee.company`
+
+---
+
+### **Day 38: Constructors - __init__() Method**
+Initialize objects with default values:
+
+**Topics Covered:**
+- **Constructor Basics**: Special method called on object creation
+  ```python
+  def __init__(self, parameters):
+      self.variable = parameter
+  ```
+  
+- **Purpose**: Initialize instance variables automatically
+- **self Parameter**: Refers to the object being created
+- **Parameterized Constructor**: Pass values during object creation
+  ```python
+  emp = Employee('Smith', 98000)  # Values passed here
+  ```
+
+---
+
+### **Day 39: Types of Constructors**
+Different constructor patterns:
+
+**Topics Covered:**
+- **Default Constructor**: No parameters (except self)
+  ```python
+  def __init__(self):
+      self.name = 'Default'
+  ```
+  
+- **Parameterized Constructor**: Takes initialization parameters
+  ```python
+  def __init__(self, name, salary):
+      self.name = name
+      self.salary = salary
+  ```
+  
+- **Constructor with Default Values**: Default parameter values
+  ```python
+  def __init__(self, name='Unknown', salary=0):
+      self.name = name
+      self.salary = salary
+  ```
+
+---
+
+### **Day 40: Types of Variables in OOP**
+Three categories of variables in object-oriented programming:
+
+**Topics Covered:**
+- **Instance Variables** (Object-level):
+  - Declared in `__init__()` method using `self`
+  - Unique to each object
+  - Different value for each instance
+  - Accessed via `object.variable`
+  ```python
+  self.name = name      # Instance variable
+  self.salary = salary
+  ```
+  
+- **Static Variables** (Class-level):
+  - Declared inside class, outside methods
+  - Shared by all instances
+  - Same value across all objects
+  - Accessed via `ClassName.variable`
+  ```python
+  company_name = 'Techcrop'  # Static variable
+  Employee.company_name
+  ```
+  
+- **Local Variables**:
+  - Declared inside methods
+  - Only accessible within that method
+  - Scope limited to method execution
+  ```python
+  def calculate():
+      temp = 100  # Local variable
+  ```
+
+---
+
+## 📊 Repository Structure
+
+```
+Python A118/
+├── Day1-40 Python files              # Daily learning files
+├── Control statements/                # if, elif, else, nested if
+├── Operators/                        # Arithmetic, relational, logical operators
+├── Looping statements/               # while, for loops
+├── Jumping statements/               # break, continue, pass
+├── Functions/                        # Built-in methods, user-defined functions
+├── Main/                            # Main program files
+├── *.csv files                      # Employee data (CSV format)
+├── *.txt files                      # Text file examples
+├── functions programming.ipynb      # Jupyter notebook
+├── data.bin                         # Binary file example
+└── README.md                        # This file
+```
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd Python\ A118
+   ```
+
+2. **Run a Python file**:
+   ```bash
+   python Day1\(print,keyword\).py
+   ```
+
+3. **Run Jupyter notebook**:
+   ```bash
+   jupyter notebook functions\ programming.ipynb
+   ```
+
+---
+
+## 💡 Key Learning Outcomes
+
+By completing this course, you will understand:
+- ✅ Python fundamentals (variables, data types, operators)
+- ✅ Control flow (conditionals, loops, functions)
+- ✅ File handling (text, CSV, binary files)
+- ✅ Exception handling and error management
+- ✅ Object-oriented programming basics (classes, objects, constructors)
+- ✅ Variable scoping and memory management
+- ✅ Python best practices and code organization
+
+---
+
+## 📝 Notes
+
+- Each file contains practical examples and explanations
+- Code is commented for easy understanding
+- Start from Day 1 and progress sequentially for best learning
+- Practice each concept before moving to the next
+- Files in subfolders contain topic-specific implementations
+
+---
+
+## 👤 Author
+
+Python A118 Learning Course - Structured Python Fundamentals
+
+## 📄 License
+
+Educational content for learning purposes.
+
+---
+
+**Last Updated**: May 2026
+**Total Days Covered**: 40+ days
+**Topics**: Fundamentals → OOP
 
 ---
 
